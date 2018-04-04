@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let recurso of recursos">
+ {{recurso.id}} - {{recurso.nombre}}
+ {{recurso.clase}} - {{recurso.estado}}
+    </button>
+  </ion-list>
 </ion-content>

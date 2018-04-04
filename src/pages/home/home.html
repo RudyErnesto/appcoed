@@ -1,15 +1,42 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Principal</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <h2>Datos servidor Externo</h2>
  <ion-list>
-   <button ion-item *ngFor="let mapa of mapas">
-{{mapa.id}} - {{mapa.address}}
-{{mapa.longitude}} - {{mapa.latitude}}
-   </button>
+    <ion-card ion-item *ngFor="let mapa of mapas">
+
+        <img src="http://programacion.net/files/article/20170405040453_mapa.jpg">
+        <ion-fab right top>
+          <button ion-fab>
+            <ion-icon name="pin"></ion-icon>
+          </button>
+        </ion-fab>
+      
+        <ion-item>
+          <ion-icon name="football" item-start large></ion-icon>
+          <h2>{{mapa.title}}</h2>
+          <p>{{mapa.address}}</p>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="wine" item-left large ></ion-icon>
+          <h2>Institute of Fine Cocktails</h2>
+          <p>14 S. Hop Avenue, Madison, WI 53703</p>
+        </ion-item>
+      
+        <ion-item>
+          <span item-left>{{mapa.latitude}}</span>
+          <span item-left>{{mapa.longitude}}</span>
+          <button ion-button icon-left clear item-end>
+            <ion-icon name="navigate"></ion-icon>
+            Start
+          </button>
+        </ion-item>
+      
+      </ion-card>
  </ion-list>
 </ion-content>

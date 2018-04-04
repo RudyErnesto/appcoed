@@ -17,5 +17,8 @@ export class Proveedor1Provider {
   obtenerDatos(){
     return this.http.get('https://apicoed.herokuapp.com/locations.json');
   }
+  obtenerRecursos(){
+    return this.http.get('https://apicoed.herokuapp.com/recursos.json');
+  }
 
 }
