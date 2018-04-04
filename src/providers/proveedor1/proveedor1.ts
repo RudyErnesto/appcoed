@@ -15,7 +15,7 @@ export class Proveedor1Provider {
     console.log('Hello Proveedor1Provider Provider');
   }
   obtenerDatos(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('https://apicoed.herokuapp.com/locations.json');
   }
 
 }
